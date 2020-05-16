@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import './App.css';
+import { BrowserRouter } from "react-router-dom";
+import ScrContainer from './screens/scrContainer'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <BrowserRouter>
+      <ScrContainer />
+    </BrowserRouter>
   );
 }
-
-export default App;
