@@ -1,57 +1,59 @@
 import React from 'react'
+import CarCard from '../components/carCard'
 
 export default function Home() {
   return (
-    <div id="home" className="container-fluid">
-      <div className="nav-bar">
-        <h2>Daos-Car</h2>
-      </div>
-      <div className="slide" style={styles.slideStyle}>
-        <img src={"images/karakoram-highway-guide-2-weeks-itinerary-main-image-op.jpg"} alt="highway" style={styles.slideImgStyle}></img>
+    <div id="home" className="row">
+      <div className="slide" style={styles.slide}>
+        <div className="offset-1 col-3" style={styles.chooseCarContainer}>
+          <div style={styles.chooseCar}>
+            <h2>CHOOSE YOUR RIGHT CAR</h2>
+            <div>
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button">
+                  Dropdown button
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* start row car */}
-      <div className="popular-car row">
-        <div className="carCard col-4">
-          <img src={"images/Mazda3-20-1024x683.jpg"} alt="car" style={styles.carCardStyle}></img>
-          <div className="carDescription">
-            <h3 className="carName">Mazda 3</h3>
-            <p className="carPrice">26979.89</p>
-          </div>
-        </div>
-        <div className="carCard col-4">
-          <img src={"images/Mazda3-20-1024x683.jpg"} alt="car" style={styles.carCardStyle}></img>
-          <div className="carDescription">
-            <h3 className="carName">Mazda 3</h3>
-            <p className="carPrice">26979.89</p>
-          </div>
-        </div>
-        <div className="carCard col-4">
-          <img src={"images/Mazda3-20-1024x683.jpg"} alt="car" style={styles.carCardStyle}></img>
-          <div className="carDescription">
-            <h3 className="carName">Mazda 3</h3>
-            <p className="carPrice">26979.89</p>
-          </div>
+      <div className="container-fluid">
+        <h2>Popular car of the month</h2>
+        <div className="popular-car row">
+          <CarCard />
+          <CarCard />
+          <CarCard />
+          <CarCard />
         </div>
       </div>
       {/* end row car */}
+
     </div >
   );
 }
 
-var styles = {
-  slideStyle: {
+const styles = {
+  slide: {
     width: "100%",
-    height: "400px"
+    height: "600px",
+    backgroundImage: `url(${"images/karakoram-highway-guide-2-weeks-itinerary-main-image-op.jpg"})`,
+    overflow: "hidden"
   },
 
-  slideImgStyle: {
-    width: "100%",
-    height: "auto"
+  chooseCarContainer: {
+    width: "auto",
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
 
-  carCardStyle: {
+  chooseCar: {
     width: "100%",
-    height: "auto"
-  }
+    height: "80%",
+    backgroundColor: "white",
+  },
 }

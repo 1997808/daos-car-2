@@ -2,7 +2,7 @@ import React from "react";
 import {
   Switch,
   Route,
-  Link
+  // Link
 } from "react-router-dom";
 import Header from './Layout/Header'
 import Footer from './Layout/Footer'
@@ -13,7 +13,7 @@ import About from './About'
 
 export default function App() {
   return (
-    <div>
+    <div className="container-fluid">
       <Header />
       {/* <nav>
           <ul>
