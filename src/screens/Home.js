@@ -1,23 +1,26 @@
 import React from 'react'
 import CarCard from '../components/carCard'
+import DropDown from '../components/dropdown'
 
 export default function Home() {
+  // const [data, setData] = useState({
+  // need data, not yet
+  // });
+
   return (
     <div id="home" className="row">
+      {/* start slide */}
       <div className="slide" style={styles.slide}>
-        <div className="offset-1 col-3" style={styles.chooseCarContainer}>
+        <div className="col-3" style={styles.chooseCarContainer}>
           <div style={styles.chooseCar}>
             <h2>CHOOSE YOUR RIGHT CAR</h2>
-            <div>
-              <div class="dropdown">
-                <button class="btn dropdown-toggle" type="button">
-                  Dropdown button
-                </button>
-              </div>
-            </div>
+            <DropDown />
+            <DropDown />
+            <DropDown />
           </div>
         </div>
       </div>
+      {/* end slide */}
 
       {/* start row car */}
       <div className="container-fluid">
@@ -40,7 +43,7 @@ const styles = {
     width: "100%",
     height: "600px",
     backgroundImage: `url(${"images/karakoram-highway-guide-2-weeks-itinerary-main-image-op.jpg"})`,
-    overflow: "hidden"
+    backgroundSize: "cover"
   },
 
   chooseCarContainer: {
@@ -54,6 +57,7 @@ const styles = {
   chooseCar: {
     width: "100%",
     height: "80%",
-    backgroundColor: "white",
+    backgroundColor: "rgba(255,255,255,0.9)",
+    padding: "15px",
   },
 }
