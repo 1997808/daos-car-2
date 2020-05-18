@@ -18,10 +18,8 @@ export default function Header() {
         <li>NEWS</li>
       </div>
       <div className="nav-search col-3" style={styles.search}>
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        <input class="form-control mr-sm-2" type="text" placeholder="Search.."></input>
+        <button type="submit" class="btn btn-dark">Search</button>
       </div>
     </div>
   );
