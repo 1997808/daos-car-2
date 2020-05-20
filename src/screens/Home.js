@@ -1,6 +1,6 @@
 import React from 'react'
-import CarCard from '../components/carCard'
-import DropDown from '../components/dropdown'
+import CarCard from '../components/CarCard'
+import DropDown from '../components/Dropdown'
 
 export default function Home() {
   // const [data, setData] = useState({
@@ -13,10 +13,19 @@ export default function Home() {
       <div className="slide" style={styles.slide}>
         <div className="col-3" style={styles.chooseCarContainer}>
           <div style={styles.chooseCar}>
-            <h2>CHOOSE YOUR RIGHT CAR</h2>
-            <DropDown />
-            <DropDown />
-            <DropDown />
+            <h3>CHOOSE YOUR RIGHT CAR</h3>
+            <DropDown
+              title="Select location"
+              list={["Option 1", "Option 2",]}
+            />
+            <DropDown
+              title="Select location"
+              list={["Option 4", "Option 5",]}
+            />
+            <DropDown
+              title="Select location"
+              list={["Option 7", "Option 8",]}
+            />
           </div>
         </div>
       </div>
@@ -58,6 +67,6 @@ const styles = {
     width: "100%",
     height: "80%",
     backgroundColor: "rgba(255,255,255,0.9)",
-    padding: "15px",
+    padding: "30px",
   },
 }
